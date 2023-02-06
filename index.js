@@ -1,5 +1,5 @@
-const events = require("./events");
-const listeners = require("./listeners");
+const events = require('./events');
+const listeners = require('./listeners');
 
 // step1
 listeners.registerListeners();
