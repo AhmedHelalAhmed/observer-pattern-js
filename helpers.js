@@ -1,12 +1,19 @@
 const EventEmitter = require('events');
-const myEmitter = new EventEmitter();
+
+class SalesEmitter extends EventEmitter {
+	constructor() {
+		super();
+	}
+}
+
+const salesEmitter = new SalesEmitter();
 const EVENT_NAME = 'newSale';
 
 const listenToEvent = (eventName, callBack) => {
-	myEmitter.on(eventName, callBack);
+	salesEmitter.on(eventName, callBack);
 };
 const fireEvent = (eventName, data) => {
-	myEmitter.emit(eventName, data);
+	salesEmitter.emit(eventName, data);
 };
 
 module.exports = {
